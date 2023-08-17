@@ -29,7 +29,6 @@
 .part1{
     height: 80vh;
     width: 49%;
-    background-color: red;
 }
 .part2{
     height: 80vh;
@@ -40,4 +39,25 @@
 .partrow1{
     display: flex;
     flex-direction: row;
+}
+.one1{
+    color: red;
+}
+.two2{
+    color:violet
+}
+.three3{
+    color: blue;
+}
+.hidden{
+    background-color: red;
+}
+.change{
+    color:cyan
+}
+.changetwo{
+    color:green;
+}
+.changethree{
+    color:coral
 }
