@@ -1,63 +1,132 @@
-.container{
-    padding: 0;
-    margin: 0;
-    background-color: burlywood;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
+.container {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(243, 243, 242);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
-.container-children{
-    height: 90vh;
-    width: 90%;
-    background-color: bisque;
-    margin:0 auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    
-
-}
-
-.line{
-    height: 80vh;
-    width: 2%;
-    background-color: black;
+.container-children {
+  height: 90vh;
+  width: 90%;
+  background-color: rgb(140, 138, 137);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 1rem;
 }
 
-.part1{
-    height: 80vh;
-    width: 49%;
-}
-.part2{
-    height: 80vh;
-    width: 49%;
-    background-color: green;
+.line {
+  height: 50vh;
+  width: 1%;
+  background-color: black;
 }
 
-.partrow1{
-    display: flex;
-    flex-direction: row;
+.part1 {
+  height: 80vh;
+  width: 49%;
 }
-.one1{
-    color: red;
+.part2 {
+  height: 80vh;
+  width: 49%;
 }
-.two2{
-    color:violet
+
+.partrow1 {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+  margin-top: 5rem;
 }
-.three3{
-    color: blue;
+.partrow2 {
+  position: relative;
+  animation: moveHorizontal 4s linear forwards;
 }
-.hidden{
-    background-color: red;
+
+.one1 {
+  font-size: 5rem;
+  color: white;
 }
-.change{
-    color:cyan
+.two2 {
+  font-size: 5rem;
+
+  color: white;
 }
-.changetwo{
-    color:green;
+.three3 {
+  font-size: 5rem;
+
+  color: white;
 }
-.changethree{
-    color:coral
+.hidden {
+  background-color: red;
+}
+.change {
+  color: rgb(0, 255, 47);
+  position: relative;
+  animation: moveHorizontal 3s linear forwards;
+}
+.changetwo {
+  color: rgb(19, 0, 128);
+  position: relative;
+  animation: moveHorizontal 3s linear forwards;
+}
+.changethree {
+  color: rgb(240, 5, 5);
+  position: relative;
+  animation: moveHorizontal 3s linear forwards;
+}
+.btn-start{
+    display: block;
+    position: absolute;
+    bottom: 5rem;
+    left: 25%;
+    background-color: orange;
+    color: white;
+    border: transparent;
+    font-size: 2rem;
+    cursor: pointer;
+border-radius: 1rem;
+transition: background-color 0.3s ease;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.btn-start:hover {
+    background-color: rgb(255, 114, 5);
+  }
+.btn-end{
+    display: block;
+    position: absolute;
+    bottom: 5rem;
+    right:  25%;
+    background-color: orange;
+    color: white;
+    border: transparent;
+    font-size: 2rem;
+    cursor: pointer;
+border-radius: 1rem;
+transition: background-color 0.3s ease;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.tittle{
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin:2rem
+}
+
+
+.btn-end:hover {
+    background-color: rgb(255, 114, 5);
+  }
+@keyframes moveHorizontal {
+  0% {
+    left: 0; /* Posición inicial */
+  }
+  100% {
+    left: calc(
+      100% - 10px
+    ); /* Posición final (ajusta el valor según tu necesidad) */
+  }
 }
