@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
   const one = document.getElementById("one");
   const two = document.getElementById("two");
@@ -38,17 +37,17 @@ document.addEventListener("DOMContentLoaded", () => {
   btn.addEventListener("click", () => {
     let colorstyle = ["change", "changetwo", "changethree"];
     let divContainer = [one, two, three];
-    let time=[1000 , 2000 , 3000]
+    let time = [1000, 2000, 3000];
     for (let i = 0; i < colorstyle.length; i++) {
       queue.addqueue(async () => {
-        console.log(` Proceso empezando ${colorstyle[i]}`);
+        // console.log(` Proceso empezando ${colorstyle[i]}`);
         await new Promise((resolve) =>
           setTimeout(() => {
             divContainer[i].classList.add(colorstyle[i]);
             resolve();
           }, time[i])
         );
-        console.log(` Proceso  terminando ${colorstyle[i]}`);
+        // console.log(` Proceso  terminando ${colorstyle[i]}`);
       });
     }
 
@@ -57,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function runQueue() {
     await queue.processAll();
-    console.log("Todos los procesos completados");
+    // console.log("Todos los procesos completados");
   }
   btn1.addEventListener("click", () => {
     location.reload();
